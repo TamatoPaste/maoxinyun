@@ -74,3 +74,24 @@ zeros:  C++: static Mat Mat::zeros(int rows, int cols, int type)     public stat
 9.5 模板匹配 matcTemplate() org.opencv.imgproc.Imgproc.matcTemplate()
     模板匹配，是通过在输入图像上滑动图像块，对实际的图像块和输入图像进行匹配的一种匹配方法。
 10 角点检测
+Harris角点检测算法在opencv中的实现方法是org.opencv.imgproc.Imgproc.cornerHarris()
+C++:  void cv::cornerHarris(Mat src, Mat& dst, int blockSize, int ksize, double k, int borderType = BORDER_DEFAULT)
+javadoc: cornerHarris(src, dst, blockSize, ksize, k, borderType)
+javadoc: cornerHarris(src, dst, blockSize, ksize, k)
+其中，src为输入图像，Mat类即可，但必须为单通道8位或浮点型图像
+      dst为函数调用后的用于存放Harris角点检测的输出结果，尺寸和类型和源图一样
+      blocksize表示邻域大小
+      ksize表示Sobel()算子孔径大小
+      k表示Harris参数
+      borderType是图像像素的边界模式，有默认值
+
+
+
+
+
+
+
+
+
+
+
