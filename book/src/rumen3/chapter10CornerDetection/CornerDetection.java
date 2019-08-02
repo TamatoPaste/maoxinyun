@@ -23,11 +23,12 @@ public class CornerDetection {
 
         //imwrite("F:\\corner.jpg",dst);
         Mat harrisCorner = new Mat( src.rows(), src.cols(), src.type());
-
+        System.out.println(harrisCorner.type()); // 0 CV_8U
+        System.out.println(harrisCorner.channels());
         threshold(cornerStrength,harrisCorner,0.00001,255,THRESH_BINARY);
 
         //imwrite("F:\\corner.jpg",harrisCorner);
-        System.out.println(harrisCorner.type());
+        System.out.println(harrisCorner.type());//5 CV_32F,说明 threadhold函数改变了harrisCorner的类型
         System.out.println(harrisCorner.channels());
 
         // 图像显示不出来，java.lang.UnsupportedOperationException: Mat data type is not compatible: 5 ,经查CV_32F = 5,
