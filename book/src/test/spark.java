@@ -9,7 +9,7 @@ public class spark {
     public static void main(String[] args) {
         test01();
     }
-    public static void test01(){
+    private static void test01(){
         // depth 就是 type
         Mat matCV_8U = new Mat(100, 100, CvType.CV_8U);
         System.out.println(matCV_8U.type());
@@ -21,7 +21,7 @@ public class spark {
         System.out.println(matCV_8UC1.channels());
         System.out.println(matCV_8UC1.depth());
 
- Mat matCV_8UC3 = new Mat(100, 100, CvType.CV_8UC2);
+        Mat matCV_8UC3 = new Mat(100, 100, CvType.CV_8UC2);
         System.out.println(matCV_8UC3.type());
         System.out.println(matCV_8UC3.channels());
         System.out.println(matCV_8UC3.depth());
